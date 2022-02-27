@@ -6,9 +6,9 @@
 <table class="table table-striped col-md-12" id="movies">
   <thead>
     <tr>
-      <th id = 'title_header'><%= link_to "Movie Title", movies_path(:sorting => "title")%></th>
+      <th id = 'title_header' class = "<%='hilite' if @sorting == 'title'%>" ><%= link_to "Movie Title", movies_path(:sorting => "title")%></th>
       <th>Rating</th>
-      <th id = 'release_date_header'> <%= link_to "Movie Title", movies_path(:sorting => "title")%> </th>
+      <th id = 'release_date_header' class = "<%="p-3 mb-2 bg-warning text-dark" if @sorting == 'release_date'%>" > <%= link_to "Release", movies_path(:sorting => "release_date")%> </th>
       <th>More Info</th>
     </tr>
   </thead>
